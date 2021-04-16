@@ -21,32 +21,37 @@ const StyledHeader = styled.header`
         transform: scale(1.5);
     }
     @media ${device.tablet} {
+        padding: 1.5rem 2rem;
         button {
             display: none;
         }
+    }
+    @media ${device.laptop} {
+        padding: 1.5rem 3rem;
+    }
+    @media ${device.laptopL} {
+        padding: 1.5rem 5rem;
+    }
+    @media ${device.desktop} {
+        padding: 1.5rem 24rem;
+    }
+    @media ${device.desktopL} {
+        padding: 1.5rem 8rem;
     }
 `;
 
 const Nav = styled.nav`
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 0;
     background-color: #1d1c1e;
     position: absolute;
     top: 100%;
     right: ${(props) => (props.isOpen ? `0` : `100%`)};
     transition: all 0.3s ease;
-    ul {
-        list-style: none;
-    }
     ul li a {
-        display: block;
         margin: 1rem 0;
-        text-decoration: none;
-        color: #ffffff;
         font-size: 2rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
+        display: block;
     }
     ul li a:hover {
         color: #e7816b;
@@ -65,11 +70,12 @@ const Nav = styled.nav`
         }
         ul li a {
             display: block;
-            color: #000000;
+            color: #1d1c1e;
             font-size: 1rem;
         }
     } ;
 `;
+
 const Header = () => {
     const { logo, open, close, navbar } = data.header;
     const [isOpen, setIsOpen] = useState(false);
