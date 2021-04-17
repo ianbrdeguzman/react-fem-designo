@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { device } from './device';
+import { Link } from 'react-router-dom';
 
-const Article = styled.article`
+const Article = styled(Link)`
     color: #ffffff;
     width: 90%;
     height: 250px;
@@ -50,9 +51,9 @@ const Article = styled.article`
     }
 `;
 
-const Project = ({ text, icon, bgS, bgM, bgL }) => {
+const Project = ({ text, icon, bgS, bgM, bgL, route }) => {
     return (
-        <Article bgS={bgS} bgM={bgM} bgL={bgL}>
+        <Article to={route} bgS={bgS} bgM={bgM} bgL={bgL}>
             <div>
                 <h2>{text} design</h2>
                 <p>

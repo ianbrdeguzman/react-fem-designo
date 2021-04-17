@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { data } from './data';
 import { device } from './device';
+import { Link } from 'react-router-dom';
 
 const StyledFooter = styled.footer`
     position: relative;
@@ -200,10 +201,12 @@ const Footer = () => {
                     </div>
                     <ul>
                         {links.map((link, index) => {
-                            const { url, text } = link;
+                            const { url, text, route } = link;
                             return (
                                 <li key={index}>
-                                    <a href={url}>{text}</a>
+                                    <Link to={route} href={url}>
+                                        {text}
+                                    </Link>
                                 </li>
                             );
                         })}

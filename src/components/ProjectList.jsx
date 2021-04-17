@@ -20,14 +20,14 @@ const Section = styled.section`
         grid-template-areas:
             'web app'
             'web graphic';
-        article:nth-child(1) {
+        a:nth-child(1) {
             grid-area: web;
             height: auto;
         }
-        article:nth-child(2) {
+        a:nth-child(2) {
             grid-area: app;
         }
-        article:nth-child(3) {
+        a:nth-child(3) {
             grid-area: graphic;
         }
     }
@@ -45,7 +45,7 @@ const ProjectList = () => {
     return (
         <Section>
             {projects.map((project, index) => {
-                const { text, icon, bgS, bgM, bgL } = project;
+                const { text, icon, bgS, bgM, bgL, route } = project;
                 return (
                     <Project
                         key={index}
@@ -54,6 +54,7 @@ const ProjectList = () => {
                         bgS={bgS}
                         bgM={bgM}
                         bgL={bgL}
+                        route={route}
                     />
                 );
             })}

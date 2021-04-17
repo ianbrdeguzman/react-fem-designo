@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { data } from './data';
 import { device } from './device';
+import { Link } from 'react-router-dom';
 
 const StyledHeader = styled.header`
     padding: 1.5rem;
@@ -86,15 +87,19 @@ const Header = () => {
 
     return (
         <StyledHeader>
-            <img src={logo} alt='logo' />
+            <Link to='/'>
+                <img src={logo} alt='logo' />
+            </Link>
             <button onClick={handleClick}>{isOpen ? close : open}</button>
             <Nav isOpen={isOpen}>
                 <ul>
                     {navbar.map((link, index) => {
-                        const { url, text } = link;
+                        const { url, text, route } = link;
                         return (
                             <li key={index}>
-                                <a href={url}>{text}</a>
+                                <Link to={route} href={url}>
+                                    {text}
+                                </Link>
                             </li>
                         );
                     })}

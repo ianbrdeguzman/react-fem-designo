@@ -32,14 +32,17 @@ export const data = {
             {
                 url: '/',
                 text: 'our company',
+                route: '/about',
             },
             {
                 url: '/',
                 text: 'locations',
+                route: '/locations',
             },
             {
                 url: '/',
                 text: 'contact',
+                route: '/contact',
             },
         ],
     },
@@ -57,6 +60,7 @@ export const data = {
             bgS: webDesignMobile,
             bgM: webDesignTablet,
             bgL: webDesignLaptop,
+            route: '/web-design',
         },
         {
             text: 'app',
@@ -64,6 +68,7 @@ export const data = {
             bgS: appDesignMobile,
             bgM: appDesignTablet,
             bgL: appDesignLaptop,
+            route: '/app-design',
         },
         {
             text: 'graphic',
@@ -71,6 +76,7 @@ export const data = {
             bgS: graphicDesignMobile,
             bgM: graphicDesignTablet,
             bgL: graphicDesignLaptop,
+            route: '/graphic-design',
         },
     ],
     features: [
@@ -106,14 +112,17 @@ export const data = {
                 {
                     url: '/',
                     text: 'our company',
+                    route: '/about',
                 },
                 {
                     url: '/',
                     text: 'locations',
+                    route: '/locations',
                 },
                 {
                     url: '/',
                     text: 'contact',
+                    route: '/contact',
                 },
             ],
         },
