@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { data } from './data';
 import { device } from './device';
+import { Link } from 'react-router-dom';
 
 const Section = styled.section`
     color: #ffffff;
@@ -21,15 +22,6 @@ const Section = styled.section`
     }
     p {
         margin: 2rem 0;
-    }
-    button {
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-    button:hover {
-        color: #ffffff;
-        background-color: #ffad9b;
     }
     @media ${device.tablet} {
         width: 90%;
@@ -62,6 +54,19 @@ const Section = styled.section`
     }
 `;
 
+const Button = styled(Link)`
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.8rem;
+    &:hover {
+        color: #ffffff;
+        background-color: #ffad9b;
+    }
+`;
+
 const ImageWrapper = styled.div`
     width: 100%;
     height: 480px;
@@ -88,7 +93,7 @@ const Hero = () => {
             <div>
                 <h1>{title}</h1>
                 <p>{text}</p>
-                <button>learn more</button>
+                <Button to='/web-design'>learn more</Button>
             </div>
             <ImageWrapper>
                 <img src={image} alt='hero' />

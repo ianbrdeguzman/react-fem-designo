@@ -11,7 +11,7 @@ const Article = styled(Link)`
     border-radius: 1rem;
     overflow: hidden;
     text-transform: uppercase;
-    background: url(${(props) => props.bgS});
+    background: url(${(props) => props.bgs});
     background-repeat: no-repeat;
     background-size: 100% 100%;
     div {
@@ -40,20 +40,20 @@ const Article = styled(Link)`
         position: relative;
     }
     @media ${device.tablet} {
-        background: url(${(props) => props.bgM});
+        background: url(${(props) => props.bgm});
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     @media ${device.laptop} {
-        background: url(${(props) => props.bgL});
+        background: url(${(props) => props.bgl});
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
 `;
 
-const Project = ({ text, icon, bgS, bgM, bgL, route }) => {
+const Project = ({ text, icon, bgs, bgm, bgl, route }) => {
     return (
-        <Article to={route} bgS={bgS} bgM={bgM} bgL={bgL}>
+        <Article to={route} bgs={bgs} bgm={bgm} bgl={bgl}>
             <div>
                 <h2>{text} design</h2>
                 <p>

@@ -41,7 +41,6 @@ const Section = styled.section`
 
 const ProjectList = () => {
     const { projects } = data;
-    const { bgL } = projects[0];
     return (
         <Section>
             {projects.map((project, index) => {
@@ -51,9 +50,9 @@ const ProjectList = () => {
                         key={index}
                         text={text}
                         icon={icon}
-                        bgS={bgS}
-                        bgM={bgM}
-                        bgL={bgL}
+                        bgs={bgS}
+                        bgm={bgM}
+                        bgl={bgL}
                         route={route}
                     />
                 );

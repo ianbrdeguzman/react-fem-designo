@@ -51,6 +51,7 @@ const Nav = styled.nav`
     transition: all 0.3s ease;
     ul li a {
         margin: 1rem 0;
+        padding: 0 0 0 1rem;
         font-size: 2rem;
         display: block;
     }
@@ -97,7 +98,11 @@ const Header = () => {
                         const { url, text, route } = link;
                         return (
                             <li key={index}>
-                                <Link to={route} href={url}>
+                                <Link
+                                    to={route}
+                                    href={url}
+                                    onClick={handleClick}
+                                >
                                     {text}
                                 </Link>
                             </li>

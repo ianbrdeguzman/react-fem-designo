@@ -31,15 +31,6 @@ const TalkAbout = styled.div`
     p {
         margin: 2rem 0;
     }
-    button {
-        padding: 1rem 2rem;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-    button:hover {
-        color: #ffffff;
-        background-color: #ffad9b;
-    }
     @media ${device.tablet} {
         padding: 4rem 8rem;
         h2 {
@@ -176,6 +167,24 @@ const Social = styled.div`
     }
 `;
 
+const Button = styled(Link)`
+    display: block;
+    margin: 1rem 0 0 0;
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    &:hover {
+        color: #ffffff;
+        background-color: #ffad9b;
+    }
+    @media ${device.laptop} {
+        width: 145px;
+    }
+`;
+
 const Footer = () => {
     const { footer } = data;
     const { title, text, bg } = footer[0];
@@ -191,7 +200,7 @@ const Footer = () => {
                     <p>{text}</p>
                 </div>
                 <div>
-                    <button>get in touch</button>
+                    <Button to='/contact'>get in touch</Button>
                 </div>
             </TalkAbout>
             <Content>
