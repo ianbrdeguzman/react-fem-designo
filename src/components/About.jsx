@@ -121,7 +121,7 @@ const Section = styled.section`
     @media ${device.laptop} {
         article:first-child div:last-child {
             width: 65%;
-            padding: 6rem 10rem 4rem 10rem;
+            padding: 4rem;
         }
         article div:last-child h2 {
             font-size: 2.5rem;
@@ -131,6 +131,14 @@ const Section = styled.section`
         }
         article:not(:first-child) div:last-child {
             width: 65%;
+            padding: 3rem;
+        }
+    }
+    @media ${device.laptopL} {
+        article:first-child div:last-child {
+            padding: 6rem 10rem 4rem 10rem;
+        }
+        article:not(:first-child) div:last-child {
             padding: 6rem 10rem 4rem 10rem;
         }
     }
@@ -177,6 +185,7 @@ const RealImageWrapper = styled.div`
 `;
 const LocationWrapper = styled.div`
     text-align: center;
+    margin: 0 auto;
     div {
         display: flex;
         flex-direction: column;
@@ -238,7 +247,7 @@ const LocationWrapper = styled.div`
         display: flex;
         justify-content: space-between;
     }
-    @media ${device.dekstop} {
+    @media ${device.desktop} {
         width: 60%;
     }
 `;
