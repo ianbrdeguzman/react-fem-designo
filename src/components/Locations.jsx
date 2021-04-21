@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ScrollToTopOnMount from './ScrollToTopOnMount';
+import Map from '../components/Map';
 import { data } from './data';
 import { device } from './device';
 
@@ -130,9 +131,8 @@ const Locations = () => {
                     city,
                     phone,
                     mail,
-                    bgm,
-                    bgl,
                     circleBg,
+                    loc,
                 } = item;
                 return (
                     <article key={index}>
@@ -155,7 +155,14 @@ const Locations = () => {
                                 </div>
                             </div>
                         </InfoWrapper>
-                        <ImageWrapper bgm={bgm} bgl={bgl} />
+                        <ImageWrapper>
+                            <Map
+                                loc={loc}
+                                office={office}
+                                street={street}
+                                city={city}
+                            />
+                        </ImageWrapper>
                     </article>
                 );
             })}

@@ -230,6 +230,7 @@ export const data = {
             bgm: locationCanadaM,
             bgl: locationCanadaL,
             circleBg: threeCircle,
+            loc: ['43.644249193715694', '-79.39446430005256'],
         },
         {
             country: 'Australia',
@@ -241,6 +242,7 @@ export const data = {
             bgm: locationAustraliaM,
             bgl: locationAustraliaL,
             circleBg: threeCircle,
+            loc: ['-30.329139188818086', '149.7882828133819'],
         },
         {
             country: 'United Kingdom',
@@ -252,6 +254,13 @@ export const data = {
             bgm: locationUKM,
             bgl: locationUKL,
             circleBg: threeCircle,
+            loc: ['53.71044358144373', '-1.3417922169753658'],
+        },
+    ],
+    contact: [
+        {
+            text:
+                'Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.',
         },
     ],
 };
