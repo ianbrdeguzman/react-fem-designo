@@ -28,130 +28,137 @@ const Section = styled.section`
     article:last-child {
         margin: 4rem 0 20rem 0;
     }
+    @media ${device.tablet} {
+        article {
+            width: 90%;
+            margin: 4rem auto;
+        }
+        article > div {
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        article:last-child {
+            margin: 4rem auto 18rem Auto;
+        }
+        article > div:first-child div div:nth-child(1) {
+            margin: 0 4rem 0 0;
+        }
+    }
+    @media ${device.laptopL} {
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        article > div:first-child {
+            width: 65%;
+            height: 326px;
+        }
+        article > div:last-child {
+            width: 30%;
+        }
+        article:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+        article:last-child {
+            margin-bottom: 15rem;
+        }
+        article > div:first-child div div:nth-child(1) {
+            margin: 0 6rem 0 0;
+        }
+    }
+    @media ${device.desktop} {
+        article {
+            width: 60%;
+        }
+    }
 `;
 
-const CaImageWrapper = styled.div`
-    width: 100%;
-    height: 326px;
-    background-image: url(${(props) => props.bgm});
-    @media ${device.desktop} {
-        background-image: url(${(props) => props.bgl});
+const InfoWrapper = styled.div`
+    background-image: url(${(props) => props.bg});
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    @media ${device.tablet} {
+        margin: 0 0 1rem 0;
+        h2 {
+            text-align: left;
+            padding: 0 0 2rem 4rem;
+        }
+        & > div {
+            padding: 0 4rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: left;
+        }
+    }
+    @media ${device.laptopL} {
+        margin: 0;
+        h2 {
+            padding: 0 0 2rem 6rem;
+        }
+        & > div {
+            padding: 0 6rem;
+        }
     }
 `;
-const AuImageWrapper = styled.div`
+
+const ImageWrapper = styled.div`
     width: 100%;
     height: 326px;
     background-image: url(${(props) => props.bgm});
-    @media ${device.desktop} {
-        background-image: url(${(props) => props.bgl});
+    @media ${device.tablet} {
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-`;
-const UkImageWrapper = styled.div`
-    width: 100%;
-    height: 326px;
-    background-image: url(${(props) => props.bgm});
     @media ${device.desktop} {
         background-image: url(${(props) => props.bgl});
     }
 `;
 
 const Locations = () => {
-    const {
-        office: CaOffice,
-        street: CaStreet,
-        city: CaCity,
-        phone: CaPhone,
-        mail: CaMail,
-        bgm: CaBgm,
-        bgl: CaBgl,
-    } = data.location[0];
-    const {
-        office: AuOffice,
-        street: AuStreet,
-        city: AuCity,
-        phone: AuPhone,
-        mail: AuMail,
-        bgm: AuBgm,
-        bgl: AuBgl,
-    } = data.location[1];
-    const {
-        office: UkOffice,
-        street: UkStreet,
-        city: UkCity,
-        phone: UkPhone,
-        mail: UkMail,
-        bgm: UkBgm,
-        bgl: UkBgl,
-    } = data.location[2];
+    const { location } = data;
+
     return (
         <Section>
             <ScrollToTopOnMount />
-            <article>
-                <div>
-                    <h2>Canada</h2>
-                    <div>
-                        <div>
-                            <h3>{CaOffice}</h3>
-                            <p>{CaStreet}</p>
-                            <p>{CaCity}</p>
-                        </div>
-                        <div>
-                            <h3>Contact</h3>
-                            <p>
-                                <a href={`tel:${CaPhone}`}>{CaPhone}</a>
-                            </p>
-                            <p>
-                                <a href={`mailto:${CaMail}`}>{CaMail}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <CaImageWrapper bgm={CaBgm} bgl={CaBgl} />
-            </article>
-            <article>
-                <div>
-                    <h2>Australia</h2>
-                    <div>
-                        <div>
-                            <h3>{AuOffice}</h3>
-                            <p>{AuStreet}</p>
-                            <p>{AuCity}</p>
-                        </div>
-                        <div>
-                            <h3>Contact</h3>
-                            <p>
-                                <a href={`tel:${AuPhone}`}>{AuPhone}</a>
-                            </p>
-                            <p>
-                                <a href={`mailto:${AuMail}`}>{AuMail}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <AuImageWrapper bgm={AuBgm} bgl={AuBgl} />
-            </article>
-            <article>
-                <div>
-                    <h2>United Kingdom</h2>
-                    <div>
-                        <div>
-                            <h3>{UkOffice}</h3>
-                            <p>{UkStreet}</p>
-                            <p>{UkCity}</p>
-                        </div>
-                        <div>
-                            <h3>Contact</h3>
-                            <p>
-                                <a href={`tel:${UkPhone}`}>{UkPhone}</a>
-                            </p>
-                            <p>
-                                <a href={`mailto:${UkMail}`}>{UkMail}</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <UkImageWrapper bgm={UkBgm} bgl={UkBgl} />
-            </article>
+            {location.map((item, index) => {
+                const {
+                    country,
+                    office,
+                    street,
+                    city,
+                    phone,
+                    mail,
+                    bgm,
+                    bgl,
+                    circleBg,
+                } = item;
+                return (
+                    <article key={index}>
+                        <InfoWrapper bg={circleBg}>
+                            <h2>{country}</h2>
+                            <div>
+                                <div>
+                                    <h3>{office}</h3>
+                                    <p>{street}</p>
+                                    <p>{city}</p>
+                                </div>
+                                <div>
+                                    <h3>Contact</h3>
+                                    <p>
+                                        <a href={`tel:${phone}`}>{phone}</a>
+                                    </p>
+                                    <p>
+                                        <a href={`mailto:${mail}`}>{mail}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </InfoWrapper>
+                        <ImageWrapper bgm={bgm} bgl={bgl} />
+                    </article>
+                );
+            })}
         </Section>
     );
 };

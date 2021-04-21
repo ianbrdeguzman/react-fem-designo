@@ -165,6 +165,15 @@ const HeroImageWrapper = styled.div`
         background-image: url(${(props) => props.bgl});
     }
 `;
+const InfoWrapper = styled.div`
+    background-image: url(${(props) => props.bgs});
+    background-repeat: no-repeat;
+    background-position: 100% -50%;
+    @media ${device.tablet} {
+        background-image: url(${(props) => props.bgl});
+        background-position: 100% 0;
+    }
+`;
 const ClassImageWrapper = styled.div`
     background-image: url(${(props) => props.bgs});
     @media ${device.tablet} {
@@ -280,8 +289,8 @@ const About = () => {
         realSmall,
         realMedium,
         realLarge,
-        bgS,
-        bgL,
+        bgs,
+        bgl,
         canadaImage,
         australiaImage,
         ukImage,
@@ -296,10 +305,10 @@ const About = () => {
                     bgm={heroMedium}
                     bgl={heroLarge}
                 />
-                <div>
+                <InfoWrapper bgs={bgs} bgl={bgl}>
                     <h2>About Us</h2>
                     <p>{textOne}</p>
-                </div>
+                </InfoWrapper>
             </article>
             <article>
                 <ClassImageWrapper
@@ -307,11 +316,11 @@ const About = () => {
                     bgm={classMedium}
                     bgl={classLarge}
                 />
-                <div>
+                <InfoWrapper bgs={bgs} bgl={bgl}>
                     <h2>World-Class Talent</h2>
                     <p>{textTwo}</p>
                     <p>{textThree}</p>
-                </div>
+                </InfoWrapper>
             </article>
             <LocationWrapper>
                 <div>
@@ -342,11 +351,11 @@ const About = () => {
                     bgm={realMedium}
                     bgl={realLarge}
                 />
-                <div>
+                <InfoWrapper bgs={bgs} bgl={bgl}>
                     <h2>The Real Deal</h2>
                     <p>{textFour}</p>
                     <p>{textFive}</p>
-                </div>
+                </InfoWrapper>
             </article>
         </Section>
     );

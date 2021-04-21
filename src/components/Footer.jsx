@@ -23,8 +23,9 @@ const TalkAbout = styled.div`
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(${(props) => props.bg});
-    background-position: 200% 180%;
+    background-image: url(${(props) => props.bgs});
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
     h2 {
         font-size: 2rem;
     }
@@ -37,13 +38,14 @@ const TalkAbout = styled.div`
             width: 240px;
             margin: 0 auto;
         }
+        background-image: url(${(props) => props.bgm});
     }
     @media ${device.laptop} {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         text-align: left;
-        background-position: 150% 1900%;
+        background-image: url(${(props) => props.bgl});
         h2 {
             margin: unset;
         }
@@ -187,14 +189,14 @@ const Button = styled(Link)`
 
 const Footer = () => {
     const { footer } = data;
-    const { title, text, bg } = footer[0];
+    const { title, text, bg, bgs, bgm, bgl } = footer[0];
     const { logo, links } = footer[1];
     const { office, street, city } = footer[2];
     const { contact, phone, mail } = footer[3];
     const { social } = footer[4];
     return (
         <StyledFooter>
-            <TalkAbout bg={bg}>
+            <TalkAbout bg={bg} bgs={bgs} bgm={bgm} bgl={bgl}>
                 <div>
                     <h2>{title}</h2>
                     <p>{text}</p>

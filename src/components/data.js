@@ -1,5 +1,8 @@
 import logoDark from '../assets/shared/desktop/logo-dark.png';
 import logoLight from '../assets/shared/desktop/logo-light.png';
+import footerBgSmall from '../assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg';
+import footerBgMedium from '../assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg';
+import footerBgLarge from '../assets/shared/desktop/bg-pattern-call-to-action.svg';
 import heroImage from '../assets/home/desktop/image-hero-phone.png';
 import heroBgImage from '../assets/home/desktop/bg-pattern-hero-home.svg';
 import facebookIcon from '../assets/shared/desktop/icon-facebook.svg';
@@ -21,6 +24,7 @@ import passionateImage from '../assets/home/desktop/illustration-passionate.svg'
 import resourcefulImage from '../assets/home/desktop/illustration-resourceful.svg';
 import friendlyImage from '../assets/home/desktop/illustration-friendly.svg';
 import twoCircle from '../assets/shared/desktop/bg-pattern-two-circles.svg';
+import threeCircle from '../assets/shared/desktop/bg-pattern-three-circles.svg';
 import aboutBgSmall from '../assets/about/mobile/bg-pattern-hero-about-mobile.svg';
 import aboutBgLarge from '../assets/about/desktop/bg-pattern-hero-about-desktop.svg';
 import aboutHeroSmall from '../assets/about/mobile/image-about-hero.jpg';
@@ -125,6 +129,9 @@ export const data = {
             text:
                 'Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.',
             bg: twoCircle,
+            bgs: footerBgSmall,
+            bgm: footerBgMedium,
+            bgl: footerBgLarge,
         },
         {
             logo: logoLight,
@@ -197,8 +204,8 @@ export const data = {
             'As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.',
         textFive:
             'We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results.',
-        bgS: aboutBgSmall,
-        bgL: aboutBgLarge,
+        bgs: aboutBgSmall,
+        bgl: aboutBgLarge,
         heroSmall: aboutHeroSmall,
         heroMedium: aboutHeroMedium,
         heroLarge: aboutHeroLarge,
@@ -214,6 +221,7 @@ export const data = {
     },
     location: [
         {
+            country: 'Canada',
             office: 'Designo Central Office',
             street: '3886 Wellington Street',
             city: 'Toronto, Ontario M9C 3J5',
@@ -221,8 +229,10 @@ export const data = {
             mail: 'contact@designo.co',
             bgm: locationCanadaM,
             bgl: locationCanadaL,
+            circleBg: threeCircle,
         },
         {
+            country: 'Australia',
             office: 'Designo AU Office',
             street: '19 Balonne Street',
             city: 'New South Wales 2443',
@@ -230,8 +240,10 @@ export const data = {
             mail: 'contact@designo.au',
             bgm: locationAustraliaM,
             bgl: locationAustraliaL,
+            circleBg: threeCircle,
         },
         {
+            country: 'United Kingdom',
             office: 'Designo UK Office',
             street: '13 Colorado Way',
             city: 'Rhyd-y-fro SA8 9GA',
@@ -239,6 +251,7 @@ export const data = {
             mail: 'contact@designo.uk',
             bgm: locationUKM,
             bgl: locationUKL,
+            circleBg: threeCircle,
         },
     ],
 };
