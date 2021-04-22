@@ -11,6 +11,7 @@ const StyledMapContainer = styled(MapContainer)`
         margin: 0;
     }
 `;
+
 const Map = ({ loc, office, street, city }) => {
     return (
         <StyledMapContainer center={loc} zoom={13} scrollWheelZoom={false}>

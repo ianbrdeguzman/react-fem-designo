@@ -18,7 +18,7 @@ const Article = styled.article`
         align-items: center;
         text-align: left;
         div:last-child {
-            margin: 0 0 0 2rem;
+            margin: 0 0 0 4rem;
         }
         p {
             margin: 0;

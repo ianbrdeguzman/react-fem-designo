@@ -54,6 +54,16 @@ import webDesignBuilder from '../assets/web-design/desktop/image-builder.jpg';
 import webDesignBlogr from '../assets/web-design/desktop/image-blogr.jpg';
 import webDesignCamp from '../assets/web-design/desktop/image-camp.jpg';
 import webDesignBg from '../assets/web-design/desktop/bg-pattern-intro-web.svg';
+import appDesignBg from '../assets/app-design/desktop/bg-pattern-intro-app.svg';
+import appDesignAirFilter from '../assets/app-design/desktop/image-airfilter.jpg';
+import appDesignEyecam from '../assets/app-design/desktop/image-eyecam.jpg';
+import appDesigndFaceit from '../assets/app-design/desktop/image-faceit.jpg';
+import appDesignLoopStudios from '../assets/app-design/desktop/image-loopstudios.jpg';
+import appDesignTodo from '../assets/app-design/desktop/image-todo.jpg';
+import graphicDesignBg from '../assets/graphic-design/desktop/bg-pattern-intro-graphic.svg';
+import graphicDesignBoxWater from '../assets/graphic-design/desktop/image-boxed-water.jpg';
+import graphicDesignChange from '../assets/graphic-design/desktop/image-change.jpg';
+import graphicDesignScience from '../assets/graphic-design/desktop/image-science.jpg';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export const data = {
@@ -175,27 +185,27 @@ export const data = {
         {
             social: [
                 {
-                    url: 'facebook.com',
+                    url: 'https://facebook.com',
                     icon: facebookIcon,
                     name: 'facebook',
                 },
                 {
-                    url: 'youtube.com',
+                    url: 'https://youtube.com',
                     icon: youtubeIcon,
                     name: 'youtube',
                 },
                 {
-                    url: 'twitter.com',
+                    url: 'https://twitter.com',
                     icon: twitterIcon,
                     name: 'twitter',
                 },
                 {
-                    url: 'pinterest.com',
+                    url: 'https://pinterest.com',
                     icon: pinterestIcon,
                     name: 'pinterest',
                 },
                 {
-                    url: 'instagram.com',
+                    url: 'https://instagram.com',
                     icon: instagramIcon,
                     name: 'instagram',
                 },
@@ -333,6 +343,106 @@ export const data = {
                     bgM: graphicDesignTablet,
                     bgL: graphicDesignLaptop,
                     route: '/graphic-design',
+                },
+            ],
+        },
+    ],
+    appDesign: [
+        {
+            text:
+                'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.',
+            bg: appDesignBg,
+            designs: [
+                {
+                    title: 'airfilter',
+                    text:
+                        'Solving the problem of poor indoor air quality by filtering the air',
+                    image: appDesignAirFilter,
+                },
+                {
+                    title: 'eyecam',
+                    text:
+                        'Product that lets you edit your favorite photos and videos at any time',
+                    image: appDesignEyecam,
+                },
+                {
+                    title: 'faceit',
+                    text:
+                        'Get to meet your favorite internet superstar with the faceit app',
+                    image: appDesigndFaceit,
+                },
+                {
+                    title: 'loopstudios',
+                    text: 'A VR experience app made for Loopstudios',
+                    image: appDesignLoopStudios,
+                },
+                {
+                    title: 'todo',
+                    text:
+                        'A todo app that features cloud sync with light and dark mode',
+                    image: appDesignTodo,
+                },
+            ],
+            projects: [
+                {
+                    text: 'web',
+                    icon: rightArrow,
+                    bgS: webDesignMobile,
+                    bgM: webDesignTablet,
+                    bgL: webDesignLaptop,
+                    route: '/web-design',
+                },
+                {
+                    text: 'graphic',
+                    icon: rightArrow,
+                    bgS: graphicDesignMobile,
+                    bgM: graphicDesignTablet,
+                    bgL: graphicDesignLaptop,
+                    route: '/graphic-design',
+                },
+            ],
+        },
+    ],
+    graphicDesign: [
+        {
+            text:
+                'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.',
+            bg: graphicDesignBg,
+            designs: [
+                {
+                    title: 'box water',
+                    text: 'A simple packaging concept made for Boxed Water',
+                    image: graphicDesignBoxWater,
+                },
+                {
+                    title: 'change',
+                    text:
+                        'A book cover designed for Tim Brown’s new release, ‘Change’',
+                    image: graphicDesignChange,
+                },
+                {
+                    title: 'science',
+                    text:
+                        'A poster made in collaboration with the Federal Art Project',
+                    image: graphicDesignScience,
+                },
+            ],
+            projects: [
+                {
+                    text: 'web',
+                    icon: rightArrow,
+                    bgS: webDesignMobile,
+                    bgM: webDesignTablet,
+                    bgL: webDesignLaptop,
+                    route: '/web-design',
+                },
+                {
+                    text: 'app',
+                    icon: rightArrow,
+                    bgS: appDesignMobile,
+                    bgM: appDesignTablet,
+                    bgL: appDesignLaptop,
+                    route: '/app-design',
                 },
             ],
         },

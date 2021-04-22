@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ScrollToTopOnMount from './ScrollToTopOnMount';
 import Project from './Project';
-import ProjectList from './ProjectList';
 import { data } from './data';
 import { device } from './device';
 
@@ -45,9 +44,8 @@ const Hero = styled.div`
         border-radius: 1rem;
     }
 `;
-
 const Projects = styled.div`
-    margin: 0 auto 4rem auto;
+    margin: 0 auto 2rem auto;
     display: flex;
     flex-wrap: wrap;
     article {
@@ -72,19 +70,22 @@ const Projects = styled.div`
         width: 90%;
         article {
             width: 100%;
+            display: flex;
         }
     }
     @media ${device.laptop} {
         width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
         article {
-            width: 48%;
+            flex-direction: column;
+            width: 100%;
+            justify-self: center;
         }
     }
-    @media ${device.laptop} {
-        width: 90%;
-        article {
-            max-width: 400px;
-        }
+    @media ${device.laptopL} {
+        grid-template-columns: repeat(3, 1fr);
     }
     @media ${device.desktop} {
         width: 60%;
@@ -93,7 +94,6 @@ const Projects = styled.div`
         }
     }
 `;
-
 const ImageWrapper = styled.div`
     height: 255px;
     margin: 0 auto;
@@ -106,7 +106,6 @@ const ImageWrapper = styled.div`
         height: 400px;
     }
 `;
-
 const InfoWrapper = styled.div`
     padding: 2rem 0;
     background-color: #fdf3f0;
@@ -116,48 +115,31 @@ const InfoWrapper = styled.div`
         letter-spacing: 2px;
     }
     @media ${device.tablet} {
+        padding: 9rem 2rem 2rem 2rem;
+    }
+    @media ${device.laptop} {
         padding: 2rem;
     }
 `;
-
 const Section = styled.section`
-    margin: 0 0 18rem 0;
+    margin: 0 0 19rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media ${device.tablet} {
-        border: 1px solid red;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-    }
     @media ${device.laptop} {
-        padding: 6rem 2rem;
+        width: 90%;
+        margin: 0 auto 13rem auto;
         display: grid;
-        justify-items: center;
-        align-items: stretch;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: auto;
-        grid-template-areas:
-            'web app'
-            'web graphic';
-        a:nth-child(1) {
-            grid-area: web;
-            height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+        a {
+            width: 100%;
+            justify-self: center;
         }
-        a:nth-child(2) {
-            grid-area: app;
-        }
-        a:nth-child(3) {
-            grid-area: graphic;
-        }
-    }
-    @media ${device.laptopL} {
-        padding: 6rem 2.5rem;
     }
     @media ${device.desktop} {
-        padding: 6rem 22rem;
+        width: 60%;
     }
 `;
 

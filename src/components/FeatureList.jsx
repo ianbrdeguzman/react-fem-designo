@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Feature from './Feature';
 import { data } from './data';
+import { device } from './device';
 
 const Section = styled.section`
-    padding: 1rem 0 15rem 0;
+    padding: 0 0 15rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +43,9 @@ const Section = styled.section`
             rgba(93, 2, 2, 0.497569),
             rgba(93, 2, 2, 0.0001)
         );
+    }
+    @media ${device.laptop} {
+        padding: 0 0 12rem 0;
     }
 `;
 

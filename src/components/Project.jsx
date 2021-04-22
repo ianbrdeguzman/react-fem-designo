@@ -52,7 +52,6 @@ const Article = styled(Link)`
 `;
 
 const Project = ({ text, icon, bgs, bgm, bgl, route }) => {
-    console.log(bgs);
     return (
         <Article to={route} bgs={bgs} bgm={bgm} bgl={bgl}>
             <div>

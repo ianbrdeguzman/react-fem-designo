@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ScrollToTopOnMount from './ScrollToTopOnMount';
 import { data } from '../components/data';
@@ -6,7 +6,7 @@ import { device } from '../components/device';
 import { Link } from 'react-router-dom';
 
 const ContactContainer = styled.div`
-    margin: 0 0 4rem 0; /*change this*/
+    margin: 0 0 4rem 0;
     text-align: center;
     color: #ffffff;
     background-color: #e7816b;
@@ -219,6 +219,7 @@ const Button = styled(Link)`
         background-color: #ffad9b;
     }
 `;
+
 const Contact = () => {
     const { contact, about } = data;
     const { text, bgs, bgl } = contact[0];

@@ -61,7 +61,6 @@ const TalkAbout = styled.div`
         width: 60%;
     }
 `;
-
 const Content = styled.div`
     background-color: #1d1c1e;
     text-align: center;
@@ -73,7 +72,6 @@ const Content = styled.div`
         padding: 10rem 0 4rem 0;
     }
 `;
-
 const Logo = styled.div`
     position: relative;
     div:nth-child(1):before {
@@ -130,7 +128,6 @@ const Logo = styled.div`
         }
     }
 `;
-
 const Info = styled.div`
     @media ${device.tablet} {
         width: 90%;
@@ -144,12 +141,10 @@ const Info = styled.div`
         width: 60%;
     }
 `;
-
 const Office = styled.div`
     margin: 2rem 0;
     color: #8e8d8e;
 `;
-
 const Contact = styled.div`
     color: #8e8d8e;
     p a {
@@ -161,14 +156,12 @@ const Contact = styled.div`
         color: #e7816b;
     }
 `;
-
 const Social = styled.div`
     a {
         display: inline-block;
         margin: 2rem 0.5rem;
     }
 `;
-
 const Button = styled(Link)`
     display: block;
     margin: 1rem 0 0 0;
@@ -207,9 +200,9 @@ const Footer = () => {
             </TalkAbout>
             <Content>
                 <Logo>
-                    <div>
+                    <Link to='/'>
                         <img src={logo} alt='logo' />
-                    </div>
+                    </Link>
                     <ul>
                         {links.map((link, index) => {
                             const { url, text, route } = link;
@@ -242,7 +235,12 @@ const Footer = () => {
                         {social.map((item, index) => {
                             const { url, icon, name } = item;
                             return (
-                                <a key={index} href={url}>
+                                <a
+                                    key={index}
+                                    href={url}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
                                     <img src={icon} alt={name} />
                                 </a>
                             );
