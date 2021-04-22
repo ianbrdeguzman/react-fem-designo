@@ -10,6 +10,9 @@ const Section = styled.section`
         margin: 4rem 0 4rem 0;
         text-align: center;
     }
+    article:first-child {
+        margin: 0 auto 4rem auto;
+    }
     a {
         color: #000000;
         letter-spacing: 0;

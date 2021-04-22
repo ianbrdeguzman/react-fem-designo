@@ -10,6 +10,8 @@ const ContactContainer = styled.div`
     text-align: center;
     color: #ffffff;
     background-color: #e7816b;
+    background-image: url(${(props) => props.bgs});
+    background-position: 22% -20%;
     div {
         width: 90%;
         margin: 0 auto;
@@ -90,10 +92,19 @@ const ContactContainer = styled.div`
         background-color: #ffad9b;
         color: #ffffff;
     }
+    @media ${device.mobileM} {
+        background-position: 20% -20%;
+    }
+    @media ${device.mobileM} {
+        background-position: 18% -20%;
+    }
     @media ${device.tablet} {
         width: 90%;
         margin: 0 auto;
         border-radius: 1rem;
+        background-image: url(${(props) => props.bgl});
+        background-repeat: no-repeat;
+        background-position: -200% -200%;
         div {
             width: 80%;
             margin: 0 auto;
@@ -103,10 +114,14 @@ const ContactContainer = styled.div`
             margin: 0 auto;
         }
     }
+    @media ${device.laptop} {
+        background-position: -50% -500%;
+    }
     @media ${device.laptopL} {
         display: flex;
         align-items: center;
         margin: 0 auto 4rem auto;
+        background-position: 0 100%;
         div:first-child {
             padding: 0 6rem;
             text-align: left;
@@ -206,18 +221,22 @@ const Button = styled(Link)`
 `;
 const Contact = () => {
     const { contact, about } = data;
+    const { text, bgs, bgl } = contact[0];
     const { canadaImage, australiaImage, ukImage } = about;
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        alert('Thank you!');
+        e.target.reset();
     };
+
     return (
         <section>
             <ScrollToTopOnMount />
-            <ContactContainer>
+            <ContactContainer bgs={bgs} bgl={bgl}>
                 <div>
                     <h1>Contact Us</h1>
-                    <p>{contact[0].text}</p>
+                    <p>{text}</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <input
@@ -225,11 +244,13 @@ const Contact = () => {
                         name='name'
                         id='name'
                         placeholder='Name'
+                        required
                     />
                     <input
                         type='text'
                         name='email'
                         id='email'
+                        pattern='[^@\s]+@[^@\s]+\.[^@\s]+'
                         placeholder='Email'
                     />
                     <input
@@ -237,12 +258,14 @@ const Contact = () => {
                         name='tel'
                         id='tel'
                         placeholder='Phone'
-                        pattern='[0-9]{3}-[0-9]{2}-[0-9]{3}'
+                        pattern='[0-9]{3}[0-9]{3}[0-9]{4}'
+                        required
                     />
                     <textarea
                         name='text'
                         id='text'
                         placeholder='Your message'
+                        required
                     ></textarea>
                     <button type='submit'>Submit</button>
                 </form>

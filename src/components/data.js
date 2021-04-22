@@ -45,6 +45,15 @@ import locationUKM from '../assets/locations/tablet/image-map-uk.png';
 import locationCanadaL from '../assets/locations/desktop/image-map-canada.png';
 import locationAustraliaL from '../assets/locations/desktop/image-map-australia.png';
 import locationUKL from '../assets/locations/desktop/image-map-uk.png';
+import contactBgs from '../assets/contact/mobile/bg-pattern-hero-contact-mobile.svg';
+import contactBgl from '../assets/contact/desktop/bg-pattern-hero-desktop.svg';
+import webDesignExpress from '../assets/web-design/desktop/image-express.jpg';
+import webDesignTransfer from '../assets/web-design/desktop/image-transfer.jpg';
+import webDesignPhoton from '../assets/web-design/desktop/image-photon.jpg';
+import webDesignBuilder from '../assets/web-design/desktop/image-builder.jpg';
+import webDesignBlogr from '../assets/web-design/desktop/image-blogr.jpg';
+import webDesignCamp from '../assets/web-design/desktop/image-camp.jpg';
+import webDesignBg from '../assets/web-design/desktop/bg-pattern-intro-web.svg';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 export const data = {
@@ -261,6 +270,71 @@ export const data = {
         {
             text:
                 'Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.',
+            bgs: contactBgs,
+            bgl: contactBgl,
+        },
+    ],
+    webDesign: [
+        {
+            text:
+                'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
+            bg: webDesignBg,
+            designs: [
+                {
+                    title: 'express',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignExpress,
+                },
+                {
+                    title: 'transfer',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignTransfer,
+                },
+                {
+                    title: 'photon',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignPhoton,
+                },
+                {
+                    title: 'builder',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignBuilder,
+                },
+                {
+                    title: 'blogr',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignBlogr,
+                },
+                {
+                    title: 'camp',
+                    text:
+                        'A multi-carrier shipping website for ecommerce businesses',
+                    image: webDesignCamp,
+                },
+            ],
+            projects: [
+                {
+                    text: 'app',
+                    icon: rightArrow,
+                    bgS: appDesignMobile,
+                    bgM: appDesignTablet,
+                    bgL: appDesignLaptop,
+                    route: '/app-design',
+                },
+                {
+                    text: 'graphic',
+                    icon: rightArrow,
+                    bgS: graphicDesignMobile,
+                    bgM: graphicDesignTablet,
+                    bgL: graphicDesignLaptop,
+                    route: '/graphic-design',
+                },
+            ],
         },
     ],
 };
