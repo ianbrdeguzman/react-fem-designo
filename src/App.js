@@ -1,15 +1,15 @@
 import React from 'react';
-import GlobalStyle from './components/GlobalStyle';
-import Header from './components/Header';
-import Home from './components/Home';
-import Footer from './components/Footer';
-import About from './components/About';
-import Locations from './components/Locations';
-import Contact from './components/Contact';
-import WebDesign from './components/WebDesign';
-import AppDesign from './components/AppDesign';
-import GraphicDesign from './components/GraphicDesign';
-import Error from './components/Error';
+import GlobalStyle from './components/helpers/GlobalStyle';
+import Header from './components/header/Header';
+import Home from './pages/home/Home';
+import Footer from './components/footer/Footer';
+import About from './pages/about/About';
+import Locations from './pages/locations/Locations';
+import Contact from './pages/contact/Contact';
+import WebDesign from './pages/web-design/WebDesign';
+import AppDesign from './pages/app-design/AppDesign';
+import GraphicDesign from './pages/graphic-design/GraphicDesign';
+import Error from './components/error/Error';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
